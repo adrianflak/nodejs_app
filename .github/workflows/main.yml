@@ -10,6 +10,9 @@ on:
 jobs: 
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        node_version: ["12", "14", "16", "18"]
     steps:
     - name: Krok 1
       uses: actions/checkout@v2
